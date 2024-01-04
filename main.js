@@ -1,15 +1,15 @@
 // YOUR CODE GOES HERE!!!
 /*************************/
-function getFirstName(obj){
-  return obj.firstName
+function getFirstName(person){
+  return person.firstName
 }
 
-function getLastName(obj){
-  return obj.lastName
+function getLastName(person){
+  return person.lastName
 }
 
-function getFullName(obj){
-  return obj.firstName + " " + obj.lastName
+function getFullName(person){
+  return person.firstName + " " + person.lastName
 }
 
 function setFirstName(obj, person){
@@ -36,8 +36,8 @@ function marry(person1, person2){
   //person1.spouseName = person2name
   person1.married = true
   person2.married = true
-  person1.spouseName = person2.firstName + " " + person2.lastName
-  person2.spouseName = person1.firstName + " " + person1.lastName
+  person1.spouseName = getFullName(person2)
+  person2.spouseName = getFullName(person1)
 
 }
 
